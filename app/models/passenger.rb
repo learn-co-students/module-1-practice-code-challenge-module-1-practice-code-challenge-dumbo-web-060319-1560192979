@@ -16,7 +16,7 @@ class Passenger
 
     def rides
         # Returns an array of Ride instances that this person has been on
-
+        Ride.all.select { |ride| ride.passenger == self }
     end
 
     def drivers
