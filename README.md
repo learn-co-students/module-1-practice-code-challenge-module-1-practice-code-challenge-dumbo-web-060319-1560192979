@@ -14,7 +14,7 @@ Always start by drawing out the relationship either on a whiteboard or piece of 
 
 We'd like for you build out the following methods for each class. As you work, we want to make sure we are testing our code every step of the way. We've made a file for you to test out your methods. Make sure you `bundle install` first. Then, you can run the command `ruby tools/console.rb` and it will run that file, along with all of the variables or actions you declare in the `tools/console.rb`.
 
-#### Passenger
+#### Passenger 
 A Passenger should be initialized with a name as a string. After the Passenger has been initialized, it shouldn't be changed.
 - `Passenger#name`
   - Returns the name of the passenger
