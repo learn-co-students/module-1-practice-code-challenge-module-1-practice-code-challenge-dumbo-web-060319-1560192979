@@ -26,9 +26,9 @@ class Driver
         Rides.all.select { |ride| ride.driver == self }
     end
 
-    def self.mileage_cap(distance)
+    def self.mileage_cap(distance_cap)
         # Takes an argument of a distance (float) and returns an 
         # array of all Drivers who have driven over the mileage
-
+        Ride.all.select { |ride| ride.driver if ride.distance > distance_cap }
     end
 end
