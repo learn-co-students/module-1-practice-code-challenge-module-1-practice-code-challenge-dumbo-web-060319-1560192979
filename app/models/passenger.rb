@@ -24,10 +24,11 @@ class Passenger
         Rides.all.select { |ride| ride.driver if ride.passenger == self }
     end
 
-    def total_distance
-        #Returns the floating number that represents the total distance 
-        # the passenger has travelled using the service
 
+    def total_distance
+        # Returns the floating number that represents the total distance 
+        # the passenger has travelled using the service
+        self.rides.inject { |total, ride| total += ride.distance }
     end
 
     def self.premium_members
