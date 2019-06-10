@@ -11,20 +11,22 @@ class Ride
     def initialize(driver, passenger, distance) 
         @driver = driver
         @passenger = passenger
-        @distance = distance
+        @distance = distance.to_f
 
         @@all << self
     end
+                    # This one was sour
+                    # def self.average_distance
+                    #     # Returns the average distance across ALL rides
+                    #     total = self.all.inject { |sum, ride| sum += ride.distance }.average
+                    # end
 
     def self.average_distance
         # Returns the average distance across ALL rides
-        total = self.all.inject { |sum, ride| sum += ride.distance }.average
-    end
-
-    def self.average_distance2
-        # Returns the average distance across ALL rides
         tally = self.all.count
-        sum = self.all.inject { |sum, ride| sum += ride.distance }.average
+        sum = 0
+
+        self.all.each { |ride| sum += ride.distance }
 
         ans = sum / tally
     end
