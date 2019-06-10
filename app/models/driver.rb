@@ -23,7 +23,7 @@ class Driver
 
     def rides
         # Returns an array of all Rides a driver has made
-
+        Rides.all.select { |ride| ride.driver == self }
     end
 
     def self.mileage_cap(distance)
