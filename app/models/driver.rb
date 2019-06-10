@@ -18,7 +18,7 @@ class Driver
     def passenger_names
         # Returns an array of all Passengers' names a driver has driven. 
         # The names should be unique (no repeats).
-
+        Ride.all.select { |ride| ride.passenger.name if ride.driver == self }.uniq
     end
 
     def rides
