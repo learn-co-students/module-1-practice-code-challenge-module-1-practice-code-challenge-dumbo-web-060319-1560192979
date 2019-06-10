@@ -29,7 +29,7 @@ class Passenger
         # Returns the floating number that represents the total distance 
         # the passenger has travelled using the service
         total = 0
-        
+
         self.rides.each { |ride| total += ride.distance }
 
         total
@@ -38,7 +38,7 @@ class Passenger
     def self.premium_members
         # Returns an array of all Passengers who have travelled 
         # over 100 miles in total with the service
-        self.all.map { |passenger| passenger if passenger.total_distance > 100 }
+        self.all.select { |passenger| passenger.total_distance > 100 }
     end
 
 

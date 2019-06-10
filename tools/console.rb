@@ -25,6 +25,7 @@ drift3 = Ride.new(cat, kim, 88.5)
 dash = Ride.new(matt, kim, 4.5)
 dash2 = Ride.new(pat, tim, 5.5)
 dash3 = Ride.new(cat, jim, 88.5)
+dash4 = Ride.new(cat, tim, 108.5)
 
 
 binding.pry
