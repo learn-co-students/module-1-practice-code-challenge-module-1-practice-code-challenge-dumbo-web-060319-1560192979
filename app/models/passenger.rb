@@ -21,7 +21,7 @@ class Passenger
 
     def drivers
         # Returns an array of Driver instances that this person has rode with
-
+        Rides.all.select { |ride| ride.driver if ride.passenger == self }
     end
 
     def total_distance
