@@ -28,7 +28,11 @@ class Passenger
     def total_distance
         # Returns the floating number that represents the total distance 
         # the passenger has travelled using the service
-        self.rides.inject { |total, ride| total += ride.distance }
+        total = 0
+        
+        self.rides.each { |ride| total += ride.distance }
+
+        total
     end
 
     def self.premium_members
