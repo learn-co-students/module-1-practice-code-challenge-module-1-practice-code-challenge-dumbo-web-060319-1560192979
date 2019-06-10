@@ -34,7 +34,7 @@ class Passenger
     def self.premium_members
         # Returns an array of all Passengers who have travelled 
         # over 100 miles in total with the service
-
+        self.all.map { |passenger| passenger if passenger.total_distance > 100 }
     end
 
 
