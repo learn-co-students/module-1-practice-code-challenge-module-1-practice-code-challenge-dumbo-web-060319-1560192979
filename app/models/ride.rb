@@ -15,11 +15,6 @@ class Ride
 
         @@all << self
     end
-                    # This one was sour
-                    # def self.average_distance
-                    #     # Returns the average distance across ALL rides
-                    #     total = self.all.inject { |sum, ride| sum += ride.distance }.average
-                    # end
 
     def self.average_distance
         # Returns the average distance across ALL rides
